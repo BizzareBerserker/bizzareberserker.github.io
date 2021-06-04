@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "在Spring中使用JdbcTemplate"
-tag: "spring"
+tag: spring
+category: essay
 ---
 
 ### 使用JdbcTemplate更改数据
