@@ -8,25 +8,32 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+
+  <!-- MathJax v3 -->
+  <!-- <script>
+  MathJax = {
+    tex: {
+      inlineMath: [              // start/end delimiter pairs for in-line math
+        ['\\(', '\\)'], ['$', '$']
+      ], displayMath: [             // start/end delimiter pairs for display math
+        ['$$', '$$'],
+        ['\\[', '\\]']
+      ],
+    }
+  };
+</script> -->
+
+  <!-- MathJax v2 -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']]
+      }
+    });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
   
 </head>
 
-<!-- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-                    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-                            });
-  </script>
-  <script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  </script> -->
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script> 
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$']],
-        processEscapes: true
-      }
-    };
-  </script>
